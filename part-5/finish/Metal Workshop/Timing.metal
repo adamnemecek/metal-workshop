@@ -2,7 +2,7 @@
 #include "TimingHeader.metal"
 using namespace metal;
 
-__constant float4 timingFunctionControlPoints = float4(0, 0.419999, 0.579999, 1);
+constant float4 timingFunctionControlPoints = float4(0, 0.419999, 0.579999, 1);
 
 float valueForTimestep(float timeStep) {
     float4 timingFunction = float4((pow(1 - timeStep, 3)),
